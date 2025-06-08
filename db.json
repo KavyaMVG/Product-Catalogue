@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "name": "Preice",
+      "price": "100",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 1
+    },
+    {
+      "name": "GadgetPro",
+      "price": "150",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 2
+    },
+    {
+      "name": "TechNova",
+      "price": "200",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 3
+    },
+    {
+      "name": "ZoomBox",
+      "price": "250",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 4
+    },
+    {
+      "name": "PixelMate",
+      "price": "300",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 5
+    },
+    {
+      "name": "EchoDrive",
+      "price": "120",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 6
+    },
+    {
+      "name": "SnapPort",
+      "price": "180",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 7
+    },
+    {
+      "name": "VoltEdge",
+      "price": "220",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 8
+    },
+    {
+      "name": "GlowPod",
+      "price": "170",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 9
+    },
+    {
+      "name": "FlexStream",
+      "price": "140",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 10
+    },
+    {
+      "name": "AuraLink",
+      "price": "260",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 11
+    },
+    {
+      "name": "NovaBeat",
+      "price": "190",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 12
+    },
+    {
+      "name": "SkyTrack",
+      "price": "210",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 13
+    },
+    {
+      "name": "PulseWave",
+      "price": "230",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 14
+    },
+    {
+      "name": "FusionLite",
+      "price": "280",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 15
+    },
+    {
+      "name": "ClipSmart",
+      "price": "160",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 16
+    },
+    {
+      "name": "MagniView",
+      "price": "300",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 17
+    },
+    {
+      "name": "Trackon",
+      "price": "270",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 18
+    },
+    {
+      "name": "CoreEdge",
+      "price": "240",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 19
+    },
+    {
+      "name": "NexGear",
+      "price": "290",
+      "imageUrl": "https://picsum.photos/100",
+      "id": 20
+    }
+  ]
+}
