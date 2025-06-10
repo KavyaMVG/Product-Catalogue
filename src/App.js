@@ -11,22 +11,16 @@ import HomePage from "./components/HomePage";
 function App() {
   const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (item, quantity) => {
-    if (!item || !quantity) {
+  const handleAddToCart = (item) => {
+    if (!item) {
       return;
     }
-    item.quantity = parseInt(quantity, 10);
-
-    const existingItemIndex = cart.findIndex(
-      (cartItem) => cartItem.id === item.id
-    );
-    if (existingItemIndex !== -1) {
-      const updatedCart = [...cart];
-      updatedCart[existingItemIndex].quantity += item.quantity;
-      setCart(updatedCart);
+    // check if item already exists in cart, if it does return
+    const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+    if (existingItem) {
       return;
     }
-    item.quantity = parseInt(quantity, 10);
+    item.quantity = 1;
     setCart([...cart, item]);
   };
 
