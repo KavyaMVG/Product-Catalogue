@@ -15,7 +15,6 @@ function App() {
     if (!item) {
       return;
     }
-    // check if item already exists in cart, if it does return
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
       return;

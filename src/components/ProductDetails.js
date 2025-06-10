@@ -27,10 +27,6 @@ const ProductDetails = ({ handleAddToCart }) => {
         console.log(error);
       });
   }, [id]);
-  const handleAddToCart = (item) => {
-    console.log({ item });
-    setCart([...cart, item]);
-  };
 
   return (
     <div className="cardWrapper">
