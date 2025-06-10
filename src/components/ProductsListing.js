@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import "./productsListing.css";
+import { CircularProgress } from "@mui/material";
 
 const ProductsListing = () => {
   const [products, setProducts] = useState([]);
@@ -21,7 +23,13 @@ const ProductsListing = () => {
 
   return (
     <div className="cardList">
-      {loading ? "Loadiiiinnnngggg" : <ProductCard products={products} />}
+      {loading ? (
+        <div className="loadingContainer">
+          <CircularProgress />
+        </div>
+      ) : (
+        <ProductCard products={products} />
+      )}
     </div>
   );
 };
