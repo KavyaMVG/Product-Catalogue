@@ -42,7 +42,7 @@ const Cart = ({
                 <p>
                   Subtotal:
                   <strong>
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ₹{(item.price * item.quantity).toFixed(2)}
                   </strong>{" "}
                 </p>
 

@@ -7,8 +7,11 @@ import {
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./productDetails.css";
+import { IoArrowBackCircle } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = ({ handleAddToCart }) => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
   const [loading, setLoading] = useState(false);
@@ -28,29 +31,32 @@ const ProductDetails = ({ handleAddToCart }) => {
   }, [id]);
 
   return (
-    <div className="cardWrapper">
-      {loading ? (
-        <CircularProgress />
-      ) : (
-        <Card className="container">
-          <div className="imgContainer">
-            <img src={productDetail?.imageUrl} alt="product-img" />
-          </div>
-          <CardContent className="content">
-            <h3>{productDetail?.name}</h3>
-            <p> ₹{productDetail?.price}</p>
-            <p>{productDetail?.description}</p>
-          </CardContent>
-          <CardActions>
-            <button
-              className="addToCartBtn"
-              onClick={() => handleAddToCart(productDetail)}
-            >
-              Add to cart
-            </button>
-          </CardActions>
-        </Card>
-      )}
+    <div>
+      <IoArrowBackCircle className="backBtn" onClick={() => navigate(-1)} />
+      <div className="cardWrapper">
+        {loading ? (
+          <CircularProgress />
+        ) : (
+          <Card className="container">
+            <div className="imgContainer">
+              <img src={productDetail?.imageUrl} alt="product-img" />
+            </div>
+            <CardContent className="content">
+              <h3>{productDetail?.name}</h3>
+              <p> ₹{productDetail?.price}</p>
+              <p>{productDetail?.description}</p>
+            </CardContent>
+            <CardActions>
+              <button
+                className="addToCartBtn"
+                onClick={() => handleAddToCart(productDetail)}
+              >
+                Add to cart
+              </button>
+            </CardActions>
+          </Card>
+        )}
+      </div>
     </div>
   );
 };

@@ -3,13 +3,20 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import ProductsListing from "./components/ProductsListing";
 import ProductDetails from "./components/ProductDetails";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cart from "./components/Cart";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 
 function App() {
   const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
 
   const handleAddToCart = (item) => {
     if (!item) {
@@ -21,11 +28,13 @@ function App() {
     }
     item.quantity = 1;
     setCart([...cart, item]);
+    localStorage.setItem("cart", JSON.stringify([...cart, item]));
   };
 
   const handleRemoveFromCart = (item) => {
     const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
     setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   const handleDecreaseQuantity = (item) => {
@@ -37,7 +46,9 @@ function App() {
       return cartItem;
     });
     setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
+
   const handleIncreaseQuantity = (item) => {
     const updatedCart = cart.map((cartItem) => {
       if (cartItem.id === item.id) {
@@ -46,6 +57,7 @@ function App() {
       return cartItem;
     });
     setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   return (
