@@ -1,124 +1,144 @@
 {
   "products": [
     {
-      "name": "Preice",
-      "price": "100",
-      "imageUrl": "https://picsum.photos/100",
+      "name": "Linen blend trousers",
+      "price": "1499",
+      "imageUrl": "https://image.hm.com/assets/hm/d9/fe/d9fe5d2b8e1ef7645b8043f49e52229b6fd0c801.jpg?imwidth=1536",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis.",
       "id": 1
     },
     {
-      "name": "GadgetPro",
-      "price": "150",
-      "imageUrl": "https://picsum.photos/100",
+      "name": "Printed T-shrit",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/e9/c3/e9c376be19ab0a6b9b6f5ef475381dc26ea9ea83.jpg?imwidth=1160",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis.",
       "id": 2
     },
     {
-      "name": "TechNova",
-      "price": "200",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 3
+      "name": "Embroidered strappy top",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/20/24/2024bf909c3cfbd94df7851f037c9bcd2142865e.jpg?imwidth=1536",
+      "id": 3,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "ZoomBox",
-      "price": "250",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 4
+      "name": "Tote bag",
+      "price": "1299",
+      "imageUrl": "https://image.hm.com/assets/hm/5c/6d/5c6d0e671e38aa7ffd77bf92d80b5a02d19f61dc.jpg?imwidth=1536",
+      "id": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "PixelMate",
-      "price": "300",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 5
+      "name": "Strappy top",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/1e/9d/1e9d54844c05d47c1560995d35989e8441195c06.jpg?imwidth=1536",
+      "id": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "EchoDrive",
-      "price": "120",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 6
+      "name": "Bow hair tie",
+      "price": "599",
+      "imageUrl": "https://image.hm.com/assets/hm/a4/57/a4578f0819f5fd757e4ea2ffa862165e3a3a1c83.jpg?imwidth=1536",
+      "id": 6,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "SnapPort",
-      "price": "180",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 7
+      "name": "Bucket bag",
+      "price": "1499",
+      "imageUrl": "https://image.hm.com/assets/hm/af/65/af65d0eb08cda239d539a7a7b361ffc0f697a99d.jpg?imwidth=1536",
+      "id": 7,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "VoltEdge",
-      "price": "220",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 8
+      "name": "Oval sunglasses",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/e0/c0/e0c0ab8032dcdd93ff732ddb851a8737b0560792.jpg?imwidth=1536",
+      "id": 8,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "GlowPod",
-      "price": "170",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 9
+      "name": "Blue denim",
+      "price": "2999",
+      "imageUrl": "https://image.hm.com/assets/hm/49/e8/49e841d7ddae44e57b28c860da35beafc72e6711.jpg?imwidth=2160",
+      "id": 9,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciend"
     },
     {
-      "name": "FlexStream",
-      "price": "140",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 10
+      "name": "Poplin top",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/f2/19/f2196ce5fa8883acd02f156b1ee9ae8f2c64a866.jpg?imwidth=1536",
+      "id": 10,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "AuraLink",
-      "price": "260",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 11
+      "name": "Crossover sandals",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/34/32/3432fc540d5a8e27b25f617d3a64c65c4b8d7519.jpg?imwidth=1536",
+      "id": 11,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "NovaBeat",
-      "price": "190",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 12
+      "name": "strappy dress",
+      "price": "1999",
+      "imageUrl": "https://image.hm.com/assets/hm/d7/b0/d7b01dcd7b4113ab313b300e650d3ca29dafe657.jpg?imwidth=1536",
+      "id": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "SkyTrack",
-      "price": "210",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 13
+      "name": "Printed drawstring trousers",
+      "price": "1999",
+      "imageUrl": "https://image.hm.com/assets/hm/2e/36/2e368132f7db295b3bf6ab50ee321b8137ac6c8e.jpg?imwidth=1536",
+      "id": 13,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "PulseWave",
-      "price": "230",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 14
+      "name": "Necklace",
+      "price": "699",
+      "imageUrl": "https://image.hm.com/assets/hm/0f/29/0f29a377ea4f247f250ce9a9494d83e825fca094.jpg?imwidth=1536",
+      "id": 14,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "FusionLite",
-      "price": "280",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 15
+      "name": "Long printed shirt",
+      "price": "2999",
+      "imageUrl": "https://image.hm.com/assets/hm/b8/00/b800306fc9567cb2d14575146c72641cf5f54209.jpg?imwidth=1536",
+      ",id": 15,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "ClipSmart",
-      "price": "160",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 16
+      "name": "Blazer",
+      "price": "4999",
+      "imageUrl": "https://image.hm.com/assets/hm/9f/ce/9fce1ecfb80d9a77fd022acf2515415a0d5e8591.jpg?imwidth=1536",
+      "id": 16,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "MagniView",
-      "price": "300",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 17
+      "name": "Bermuda shorts",
+      "price": "2499",
+      "imageUrl": "https://image.hm.com/assets/hm/ff/b8/ffb870621237d38baa407639d5e3c0792575743c.jpg?imwidth=1536",
+      "id": 17,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "Trackon",
-      "price": "270",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 18
+      "name": "Bermuda shorts",
+      "price": "2499",
+      "imageUrl": "https://image.hm.com/assets/hm/c5/ae/c5aed8bf04d993d6c5a66ea49ff0f18ab6bd9883.jpg?imwidth=368",
+      "id": 18,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "CoreEdge",
-      "price": "240",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 19
+      "name": "Waist coat",
+      "price": "999",
+      "imageUrl": "https://image.hm.com/assets/hm/79/12/7912ceaf31879f846f7bc43b715f5639288c2a5f.jpg?imwidth=368",
+      "id": 19,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     },
     {
-      "name": "NexGear",
-      "price": "290",
-      "imageUrl": "https://picsum.photos/100",
-      "id": 20
+      "name": "Oversized motif-detail Tee",
+      "price": "799",
+      "imageUrl": "https://image.hm.com/assets/hm/d8/55/d855ea1ce8c83cf2b125849cb8996f9a1f9b93ca.jpg?imwidth=1536",
+      "id": 20,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis."
     }
   ]
 }

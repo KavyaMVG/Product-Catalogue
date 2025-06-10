@@ -11,12 +11,12 @@ const ProductCard = ({ products }) => {
         key={product.id}
         onClick={() => navigate(`/products/${product.id}`)}
       >
-        <div className="cardImage">
-          <img src={product.imageUrl} alt="product-img" />
+        <div className="cardImgContainer">
+          <img src={product.imageUrl || "/placeholder.svg"} alt="product-img" />
         </div>
         <CardContent className="cardContent">
-          <p>{product.name}</p>
-          <p>{product.price}</p>
+          <h3>{product.name}</h3>
+          <p>Rs.{product.price}</p>
         </CardContent>
       </Card>
     );
