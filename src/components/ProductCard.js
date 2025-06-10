@@ -16,7 +16,7 @@ const ProductCard = ({ products }) => {
         </div>
         <CardContent className="cardContent">
           <h3>{product.name}</h3>
-          <p>Rs.{product.price}</p>
+          <p> ₹{product.price}</p>
         </CardContent>
       </Card>
     );

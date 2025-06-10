@@ -1,4 +1,8 @@
+import { Card, CardActions, CardContent } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./cart.css";
+import { IoArrowBackCircle } from "react-icons/io5";
 
 const Cart = ({
   cart,
@@ -6,6 +10,8 @@ const Cart = ({
   handleIncreaseQuantity,
   handleDecreaseQuantity,
 }) => {
+  const navigate = useNavigate();
+
   const getCartTotal = (cartItems) => {
     let total = 0;
     cartItems.forEach((item) => {
@@ -15,37 +21,67 @@ const Cart = ({
   };
 
   return (
-    <div>
-      <button onClick={() => window.history.back()}>Go Back</button>
-      <h2>Cart</h2>
-      {cart.map((item) => (
-        <div
-          key={item.id}
-          style={{ border: "1px solid black", margin: "1rem" }}
-        >
-          <p>{item.name}</p>
-          <p>Price: ${item.price}</p>
-          <p>Quantity: {item.quantity}</p>
-          <img
-            src={item.imageUrl}
-            alt="product-img"
-            style={{ width: "100px" }}
-          />
-          <button onClick={() => handleDecreaseQuantity(item)}>-</button>
-          <span>{item.quantity}</span>
-          <button onClick={() => handleIncreaseQuantity(item)}>+</button>
-          <p>Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
-          <button onClick={() => handleRemoveFromCart(item)}>
-            Remove from cart
-          </button>
-        </div>
-      ))}
-      {cart.length === 0 ? (
-        <p>Your cart is empty</p>
-      ) : (
-        <h3>Total: ${getCartTotal(cart).toFixed(2)}</h3>
-      )}
-    </div>
+    <>
+      <div className="cartHeader">
+        <IoArrowBackCircle className="backBtn" onClick={() => navigate(-1)} />
+
+        <h2 className="title">Cart</h2>
+      </div>
+      <div className="cartWrapper">
+        {cart.map((item) => (
+          <Card key={item.id} className="cartContainer">
+            <div className="cartImg">
+              <img src={item.imageUrl} alt="product-img" />
+            </div>
+            <CardContent className="cartContent">
+              <h3>{item.name}</h3>
+              <p className="price">Price: ₹{item.price}</p>
+
+              <div>
+                <p className="qty">Quantity: {item.quantity}</p>
+                <p>
+                  Subtotal:
+                  <strong>
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </strong>{" "}
+                </p>
+
+                <div className="actionBtnWrapper">
+                  <button
+                    className="actionBtn"
+                    onClick={() => handleDecreaseQuantity(item)}
+                  >
+                    -
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button
+                    className="actionBtn"
+                    onClick={() => handleIncreaseQuantity(item)}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </CardContent>
+            <CardActions>
+              <button
+                className="removeBtn"
+                onClick={() => handleRemoveFromCart(item)}
+              >
+                Remove from cart
+              </button>
+            </CardActions>
+          </Card>
+        ))}
+        {cart.length === 0 ? (
+          <p>Your cart is empty</p>
+        ) : (
+          <p>
+            Total:<strong>₹{getCartTotal(cart).toFixed(2)}</strong>{" "}
+          </p>
+        )}
+      </div>
+    </>
   );
 };
 

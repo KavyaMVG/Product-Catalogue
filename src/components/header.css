@@ -3,9 +3,24 @@
     display: flex;
     justify-content: end;
     box-shadow: 5px 5px 15px #2b3944;
+    position: relative;
+}
+
+.header span{
+    position: absolute;
+    bottom: 19%;
+    right: 2%;
+    color: rgb(255,0,0);
 }
 
 .cart{
     font-size: 1.7rem;
+    cursor: pointer;
 }
 
+
+@media(max-width:480px) {
+    .header span{
+        right: 6%;
+    }
+}

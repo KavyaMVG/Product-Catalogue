@@ -11,7 +11,6 @@ import "./productDetails.css";
 const ProductDetails = ({ handleAddToCart }) => {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
-  const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -33,17 +32,20 @@ const ProductDetails = ({ handleAddToCart }) => {
       {loading ? (
         <CircularProgress />
       ) : (
-        <Card className="cardDtlContainer">
-          <div className="cardDtlImgContainer">
+        <Card className="container">
+          <div className="imgContainer">
             <img src={productDetail?.imageUrl} alt="product-img" />
           </div>
-          <CardContent className="cardDtlContent">
+          <CardContent className="content">
             <h3>{productDetail?.name}</h3>
-            <p>Rs.{productDetail?.price}</p>
+            <p> ₹{productDetail?.price}</p>
             <p>{productDetail?.description}</p>
           </CardContent>
           <CardActions>
-            <button onClick={() => handleAddToCart(productDetail)}>
+            <button
+              className="addToCartBtn"
+              onClick={() => handleAddToCart(productDetail)}
+            >
               Add to cart
             </button>
           </CardActions>

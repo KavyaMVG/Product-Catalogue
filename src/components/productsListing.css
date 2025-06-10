@@ -24,7 +24,14 @@
 }
 .cardImgContainer img{
     width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
+
+.cardContainer:hover .cardImgContainer img {
+    transform: scale(1.2);
+  }
+
 .cardContent h3{
     font-size: 0.98rem;
     padding: 0.5rem 0;
