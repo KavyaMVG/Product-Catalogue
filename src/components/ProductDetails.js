@@ -1,34 +1,58 @@
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CircularProgress,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./productDetails.css";
 
 const ProductDetails = ({ handleAddToCart }) => {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
   const [quantity, setQuantity] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch(`http://localhost:3005/products/${id}`)
       .then((response) => response.json())
-      .then((response) => setProductDetail(response))
-      .catch((error) => console.log(error));
+      .then((response) => {
+        setLoading(false);
+        setProductDetail(response);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
+      });
   }, [id]);
+  const handleAddToCart = (item) => {
+    console.log({ item });
+    setCart([...cart, item]);
+  };
 
   return (
-    <div style={{ border: "1px solid black", width: "250px", margin: "1rem" }}>
-      <p>{productDetail?.name}</p>
-      <p>{productDetail?.price}</p>
-      <img src={productDetail?.imageUrl} alt="product-img" />
-      <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
-        <option value="">Select quantity</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-      <p>{productDetail?.description}</p>
-      <button onClick={() => handleAddToCart(productDetail, quantity)}>
-        Add to cart
-      </button>
+    <div className="cardWrapper">
+      {loading ? (
+        <CircularProgress />
+      ) : (
+        <Card className="cardDtlContainer">
+          <div className="cardDtlImgContainer">
+            <img src={productDetail?.imageUrl} alt="product-img" />
+          </div>
+          <CardContent className="cardDtlContent">
+            <h3>{productDetail?.name}</h3>
+            <p>Rs.{productDetail?.price}</p>
+            <p>{productDetail?.description}</p>
+          </CardContent>
+          <CardActions>
+            <button onClick={() => handleAddToCart(productDetail)}>
+              Add to cart
+            </button>
+          </CardActions>
+        </Card>
+      )}
     </div>
   );
 };

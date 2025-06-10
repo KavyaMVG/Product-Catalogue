@@ -18,6 +18,21 @@
     min-height: 300px;
 }
 
-.cardImage{
+.cardImgContainer{
     overflow: hidden;
+    background: #f9f9f9;
+}
+.cardImgContainer img{
+    width: 100%;
+}
+.cardContent h3{
+    font-size: 0.98rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    letter-spacing: 0.1ch;
+}
+
+.cardContent p{
+    font-size: 1.1rem;
+    font-weight: 700;
 }
