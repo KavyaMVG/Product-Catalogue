@@ -14,14 +14,12 @@ const Cart = ({ cart }) => {
     }
   });
 
-  console.log({ productFreq });
-
-  return productFreq.map((item) => {
+  return Object.values(productFreq).map((item) => {
     return (
       <div key={item.id}>
-        <p>{item.price}</p>
-        <p>{item.name}</p>
-        <p>{item.id}</p>
+        <p>Product: {item.name}</p>
+        <p>Price: {item.price}</p>
+        <p>Quantity: {item.quantity}</p>
       </div>
     );
   });
