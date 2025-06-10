@@ -1,5 +1,5 @@
 import React from "react";
-import modelImg from "../images/hnm.avif";
+import modelImg from "../../images/hnm.avif";
 import "./homePage.css";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "./../../components/ProductCard/ProductCard";
 import "./productsListing.css";
 import { CircularProgress } from "@mui/material";
 

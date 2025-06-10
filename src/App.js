@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import ProductsListing from "./components/ProductsListing";
-import ProductDetails from "./components/ProductDetails";
+import ProductsListing from "./pages/ProductListing/ProductsListing";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import { useEffect, useState } from "react";
-import Cart from "./components/Cart";
-import Header from "./components/Header";
-import HomePage from "./components/HomePage";
+import Cart from "./components/Cart/Cart";
+import Header from "./components/Header/Header";
+import HomePage from "./pages/Home/HomePage";
 
 function App() {
   const [cart, setCart] = useState([]);
