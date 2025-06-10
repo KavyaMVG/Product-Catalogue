@@ -3,62 +3,19 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import ProductsListing from "./pages/ProductListing/ProductsListing";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import { useEffect, useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/Home/HomePage";
+import useCart from "./hooks/useCart";
 
 function App() {
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    const storedCart = localStorage.getItem("cart");
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
-    }
-  }, []);
-
-  const handleAddToCart = (item) => {
-    if (!item) {
-      return;
-    }
-    const existingItem = cart.find((cartItem) => cartItem.id === item.id);
-    if (existingItem) {
-      return;
-    }
-    item.quantity = 1;
-    setCart([...cart, item]);
-    localStorage.setItem("cart", JSON.stringify([...cart, item]));
-  };
-
-  const handleRemoveFromCart = (item) => {
-    const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
-
-  const handleDecreaseQuantity = (item) => {
-    const updatedCart = cart.map((cartItem) => {
-      if (cartItem.id === item.id) {
-        const newQuantity = cartItem.quantity - 1;
-        return { ...cartItem, quantity: newQuantity > 0 ? newQuantity : 1 };
-      }
-      return cartItem;
-    });
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
-
-  const handleIncreaseQuantity = (item) => {
-    const updatedCart = cart.map((cartItem) => {
-      if (cartItem.id === item.id) {
-        return { ...cartItem, quantity: cartItem.quantity + 1 };
-      }
-      return cartItem;
-    });
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
+  const {
+    cart,
+    handleAddToCart,
+    handleRemoveFromCart,
+    handleDecreaseQuantity,
+    handleIncreaseQuantity,
+  } = useCart();
 
   return (
     <div className="App">
