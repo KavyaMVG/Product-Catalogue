@@ -73,13 +73,16 @@ const Cart = ({
             </CardActions>
           </Card>
         ))}
-        {cart.length === 0 ? (
-          <p>Your cart is empty</p>
-        ) : (
-          <p>
-            Total:<strong>₹{getCartTotal(cart).toFixed(2)}</strong>{" "}
-          </p>
-        )}
+        <div className="cartTotal" style={{ margin: "2rem" }}>
+          {cart.length === 0 ? (
+            <p>Your cart is empty</p>
+          ) : (
+            <p>
+              <label>Total Amount: </label>
+              <strong>₹{getCartTotal(cart).toFixed(2)}</strong>
+            </p>
+          )}
+        </div>
       </div>
     </>
   );

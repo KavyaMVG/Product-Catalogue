@@ -1,76 +1,76 @@
-.cardWrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.backBtn{
-    cursor: pointer; 
+.backBtn {
+  cursor: pointer;
+  margin: 1rem;
 }
-.container{
-    max-width: 600px;
-    width: 100%;
-    margin-top: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
-.imgContainer{
-    overflow: hidden;
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f9f9f9;
-}
-
-.container img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+.imgContainer {
+  overflow: hidden;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
 }
 
-.content{
-    padding: 2rem;
-    text-align: center;
+.container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
-.content h3{
-    font-size: 1.4rem;
-    padding: 0.5rem 0;
-    font-weight: 400;
-    letter-spacing: 0.1ch;
+.content {
+  padding: 2rem;
+  text-align: center;
 }
 
-.content p{
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding-bottom: 0.5rem;
+.content h3 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 0.1ch;
 }
 
-.container p:nth-of-type(2){
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 0 5rem;
-}
-.addToCartBtn{
-    margin: 0 auto;
-    color: #fff;
-    background-color: #000;
-    border-radius: 5px;
-    padding: 0.5rem 1.5rem;
-    letter-spacing: 0.1ch;
-    margin-bottom: 1rem;
-    cursor: pointer;
+.content p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
 }
 
+.container p:nth-of-type(2) {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 0 5rem;
+}
 
-@media (max-width:460px) {
-    .cardContainer p:nth-of-type(2){
-        font-size: 0.8rem;
-        padding: 0;
-        line-height: 2.5ch;
-    }
-    
+.addToCartBtn {
+  margin: 0 auto;
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 0.1ch;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 460px) {
+  .cardContainer p:nth-of-type(2) {
+    font-size: 0.8rem;
+    padding: 0;
+    line-height: 2.5ch;
+  }
 }

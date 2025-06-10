@@ -68,8 +68,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="products" element={<ProductsListing />} />
           <Route
-            path="products/:id"
-            element={<ProductDetails handleAddToCart={handleAddToCart} />}
+            path="product/:id"
+            element={
+              <ProductDetails cart={cart} handleAddToCart={handleAddToCart} />
+            }
           />
           <Route
             path="cart"

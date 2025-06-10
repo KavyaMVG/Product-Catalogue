@@ -1,26 +1,32 @@
-.header{
-    padding: 2rem;
-    display: flex;
-    justify-content: end;
-    box-shadow: 5px 5px 15px #2b3944;
-    position: relative;
+.header {
+  padding: 2rem;
+  display: flex;
+  justify-content: end;
+  box-shadow: 5px 5px 15px #2b3944;
+  position: relative;
 }
 
-.header span{
-    position: absolute;
-    bottom: 19%;
-    right: 2%;
-    color: rgb(255,0,0);
+.header span {
+  position: absolute;
+  bottom: 19%;
+  right: 2%;
+  color: rgb(255, 0, 0);
 }
 
-.cart{
-    font-size: 1.7rem;
-    cursor: pointer;
+.cart {
+  font-size: 1.7rem;
+  cursor: pointer;
 }
 
+.header span {
+  background-color: #2b3944;
+  border-radius: 50%;
+  padding: 0.2rem 0.3rem;
+  color: #fff;
+}
 
-@media(max-width:480px) {
-    .header span{
-        right: 6%;
-    }
+@media (max-width: 480px) {
+  .header span {
+    right: 6%;
+  }
 }

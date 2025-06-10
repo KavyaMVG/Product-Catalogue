@@ -9,7 +9,7 @@ const Header = ({ cart }) => {
   return (
     <main>
       <header className="header">
-        <span>{cart?.length}</span>
+        <span className="item-count">{cart?.length}</span>
         <FaShoppingCart className="cart" onClick={() => navigate("/cart")} />
       </header>
     </main>

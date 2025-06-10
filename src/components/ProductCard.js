@@ -9,7 +9,7 @@ const ProductCard = ({ products }) => {
       <Card
         className="cardContainer"
         key={product.id}
-        onClick={() => navigate(`/products/${product.id}`)}
+        onClick={() => navigate(`/product/${product.id}`)}
       >
         <div className="cardImgContainer">
           <img src={product.imageUrl || "/placeholder.svg"} alt="product-img" />

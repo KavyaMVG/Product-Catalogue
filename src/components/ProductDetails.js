@@ -10,7 +10,7 @@ import "./productDetails.css";
 import { IoArrowBackCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
-const ProductDetails = ({ handleAddToCart }) => {
+const ProductDetails = ({ cart, handleAddToCart }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
@@ -29,6 +29,13 @@ const ProductDetails = ({ handleAddToCart }) => {
         console.log(error);
       });
   }, [id]);
+
+  const isItemInCart = (item) => {
+    if (!item || !cart || cart.length === 0) {
+      return false;
+    }
+    return cart.some((cartItem) => cartItem.id === item.id);
+  };
 
   return (
     <div>
@@ -50,8 +57,13 @@ const ProductDetails = ({ handleAddToCart }) => {
               <button
                 className="addToCartBtn"
                 onClick={() => handleAddToCart(productDetail)}
+                style={{
+                  backgroundColor: isItemInCart(productDetail)
+                    ? "#4CAF50"
+                    : null,
+                }}
               >
-                Add to cart
+                {isItemInCart(productDetail) ? `Added` : "Add"} to cart
               </button>
             </CardActions>
           </Card>
