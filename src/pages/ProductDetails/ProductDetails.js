@@ -15,18 +15,29 @@ const ProductDetails = ({ cart, handleAddToCart }) => {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
     fetch(`http://localhost:3005/products/${id}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.status === 404) {
+          setLoading(false);
+          throw new Error("Product not found");
+        }
+        if (!response.ok) {
+          setLoading(false);
+          throw new Error("Server error");
+        }
+        return response.json();
+      })
       .then((response) => {
         setLoading(false);
         setProductDetail(response);
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
+        setError(error.message);
       });
   }, [id]);
 
@@ -43,6 +54,13 @@ const ProductDetails = ({ cart, handleAddToCart }) => {
       <div className="cardWrapper">
         {loading ? (
           <CircularProgress />
+        ) : error ? (
+          <div className="error">
+            <h2>{error}</h2>
+            <button onClick={() => navigate("/products")}>
+              Go to Products
+            </button>
+          </div>
         ) : (
           <Card className="container">
             <div className="imgContainer">

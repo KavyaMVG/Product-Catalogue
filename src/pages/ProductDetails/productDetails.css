@@ -67,6 +67,23 @@
   cursor: pointer;
 }
 
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.error button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: black;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
 @media (max-width: 460px) {
   .cardContainer p:nth-of-type(2) {
     font-size: 0.8rem;
