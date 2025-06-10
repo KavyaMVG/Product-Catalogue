@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const ProductDetails = () => {
+const ProductDetails = ({ cart, setCart }) => {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
 
@@ -11,13 +11,19 @@ const ProductDetails = () => {
       .then((response) => setProductDetail(response))
       .catch((error) => console.log(error));
   }, [id]);
+  const handleAddToCart = (item) => {
+    setCart([...cart, item]);
+  };
 
   return (
     <div style={{ border: "1px solid black", width: "250px", margin: "1rem" }}>
+      {console.log("111", cart)}
       <p>{productDetail?.name}</p>
       <p>{productDetail?.price}</p>
       <img src={productDetail?.imageUrl} alt="product-img" />
-      <button>Add to cart</button>
+      <button onClick={() => handleAddToCart(productDetail)}>
+        Add to cart
+      </button>
     </div>
   );
 };

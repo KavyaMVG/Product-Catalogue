@@ -20,7 +20,7 @@ const ProductsListing = () => {
   }, []);
 
   return (
-    <div>
+    <div className="cardList">
       {loading ? "Loadiiiinnnngggg" : <ProductCard products={products} />}
     </div>
   );

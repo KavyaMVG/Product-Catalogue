@@ -1,0 +1,11 @@
+.header{
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+    box-shadow: 10px 5px 5px #a97b63;
+}
+
+.cart{
+    font-size: 1.7rem;
+}
+
