@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const ProductDetails = ({ cart, setCart }) => {
+const ProductDetails = ({ handleAddToCart }) => {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState();
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     fetch(`http://localhost:3005/products/${id}`)
@@ -11,17 +12,21 @@ const ProductDetails = ({ cart, setCart }) => {
       .then((response) => setProductDetail(response))
       .catch((error) => console.log(error));
   }, [id]);
-  const handleAddToCart = (item) => {
-    setCart([...cart, item]);
-  };
 
   return (
     <div style={{ border: "1px solid black", width: "250px", margin: "1rem" }}>
-      {console.log("111", cart)}
       <p>{productDetail?.name}</p>
       <p>{productDetail?.price}</p>
       <img src={productDetail?.imageUrl} alt="product-img" />
-      <button onClick={() => handleAddToCart(productDetail)}>
+      <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
+        <option value="">Select quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <p>{productDetail?.description}</p>
+      <button onClick={() => handleAddToCart(productDetail, quantity)}>
         Add to cart
       </button>
     </div>
