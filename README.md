@@ -1,8 +1,6 @@
 # Product Catalogue
 
-This is a React-based product catalogue application that allows users to browse products, view product details, and manage a shopping cart. The application uses a JSON server for backend data and supports local development as well as deployment on Vercel.
-
----
+This is a React-based product catalogue application that allows users to browse products, view product details, and manage a shopping cart. The application uses a JSON server for backend data.
 
 ## Features
 
@@ -11,17 +9,12 @@ This is a React-based product catalogue application that allows users to browse 
 - Shopping cart management.
 - JSON server for backend data.
 
----
-
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
 - **Node.js** (v16 or higher)
 - **npm** (comes with Node.js)
-- **Vercel CLI** (optional, for deployment)
-
----
 
 ## Setup Instructions
 
