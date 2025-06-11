@@ -1,45 +1,61 @@
-.cardList{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.loadingContainer{
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loadingContainer {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cardContainer{
-    margin-top: 1rem;
-    min-height: 300px;
+.cardContainer {
+  margin-top: 1rem;
+  min-height: 300px;
 }
 
-.cardImgContainer{
-    overflow: hidden;
-    background: #f9f9f9;
+.cardImgContainer {
+  overflow: hidden;
+  background: #f9f9f9;
 }
-.cardImgContainer img{
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
+.cardImgContainer img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
 .cardContainer:hover .cardImgContainer img {
-    transform: scale(1.2);
-  }
-
-.cardContent h3{
-    font-size: 0.98rem;
-    padding: 0.5rem 0;
-    font-weight: 500;
-    letter-spacing: 0.1ch;
+  transform: scale(1.2);
 }
 
-.cardContent p{
-    font-size: 1.1rem;
-    font-weight: 700;
+.cardContent h3 {
+  font-size: 0.98rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  letter-spacing: 0.1ch;
+}
+
+.cardContent p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 1rem auto;
 }
