@@ -10,19 +10,15 @@
   position: absolute;
   bottom: 19%;
   right: 2%;
-  color: rgb(255, 0, 0);
+  background-color: #2b3944;
+  border-radius: 50%;
+  padding: 0.2rem 0.3rem;
+  color: #fff;
 }
 
 .cart {
   font-size: 1.7rem;
   cursor: pointer;
-}
-
-.header span {
-  background-color: #2b3944;
-  border-radius: 50%;
-  padding: 0.2rem 0.3rem;
-  color: #fff;
 }
 
 @media (max-width: 480px) {
