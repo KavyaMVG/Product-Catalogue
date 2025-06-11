@@ -89,9 +89,6 @@ const ProductsListing = () => {
         ) : error ? (
           <div className="error">
             <h2>{error}</h2>
-            <button onClick={() => navigate("/products")}>
-              Go to Products
-            </button>
           </div>
         ) : (
           <ProductCard products={products} />
