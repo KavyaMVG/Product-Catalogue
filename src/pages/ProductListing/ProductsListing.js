@@ -7,11 +7,23 @@ const ProductsListing = () => {
   const [products, setProducts] = useState([]);
   const [initialProducts, setInitialProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
+    setError(null);
     fetch("http://localhost:3005/products")
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.status === 404) {
+          setLoading(false);
+          throw new Error("Products not found");
+        }
+        if (!response.ok) {
+          setLoading(false);
+          throw new Error("Server error");
+        }
+        return response.json();
+      })
       .then((response) => {
         setInitialProducts(response);
         setLoading(false);
@@ -19,7 +31,7 @@ const ProductsListing = () => {
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
+        setError(error.message);
       });
   }, []);
 
@@ -71,6 +83,13 @@ const ProductsListing = () => {
         {loading ? (
           <div className="loadingContainer">
             <CircularProgress />
+          </div>
+        ) : error ? (
+          <div className="error">
+            <h2>{error}</h2>
+            <button onClick={() => navigate("/products")}>
+              Go to Products
+            </button>
           </div>
         ) : (
           <ProductCard products={products} />
