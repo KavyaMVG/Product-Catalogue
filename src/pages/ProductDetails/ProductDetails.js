@@ -19,7 +19,7 @@ const ProductDetails = ({ cart, handleAddToCart }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3005/products/${id}`)
+    fetch(`https://json-server-vercel-sigma-rust.vercel.app/products/${id}`)
       .then((response) => {
         if (response.status === 404) {
           setLoading(false);
