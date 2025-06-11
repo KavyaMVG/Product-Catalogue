@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import ProductCard from "./../../components/ProductCard/ProductCard";
 import "./productsListing.css";
 import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const ProductsListing = () => {
   const [products, setProducts] = useState([]);
   const [initialProducts, setInitialProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
