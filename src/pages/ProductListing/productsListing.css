@@ -67,8 +67,30 @@
 
 .sortBy select{
   padding: 0.5rem;
+  background: black;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+}
+
+.searchBar{
+  display: flex;
+  background-color: #d3d3d3;
+  border: 1px solid darkgray;
+  border-radius: 2px;
 }
 
 .searchBar input{
   padding: 0.5rem;
+  border: 0;
+}
+
+.search{
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+  border: 0;
+  background-color:inherit;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
 }

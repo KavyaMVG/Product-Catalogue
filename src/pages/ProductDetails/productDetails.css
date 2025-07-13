@@ -58,13 +58,13 @@
 
 .addToCartBtn {
   margin: 0 auto;
-  color: #fff;
   background-color: #000;
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   letter-spacing: 0.1ch;
   margin-bottom: 1rem;
   cursor: pointer;
+  color: #fff;
 }
 
 .error {

@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import ProductCard from "./../../components/ProductCard/ProductCard";
 import "./productsListing.css";
 import { CircularProgress } from "@mui/material";
+import { FaSearch } from "react-icons/fa";
 
 const ProductsListing = () => {
   const [products, setProducts] = useState([]);
   const [initialProducts, setInitialProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -35,12 +37,12 @@ const ProductsListing = () => {
       });
   }, []);
 
-  const handleSearch = (searchTerm) => {
-    if (searchTerm.trim() === "") {
+  const handleSearch = () => {
+    if (query.trim() === "") {
       setProducts(initialProducts);
     } else {
       const filteredProducts = initialProducts.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        product.name.toLowerCase().includes(query.toLowerCase())
       );
       setProducts(filteredProducts);
     }
@@ -73,9 +75,17 @@ const ProductsListing = () => {
         <div className="searchBar">
           <input
             type="text"
-            placeholder="Search products..."
-            onChange={(e) => handleSearch(e.target.value)}
+            placeholder="Search...."
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
+            onChange={(e) => setQuery(e.target.value)}
           />
+          <button className="search" onClick={handleSearch}>
+            <FaSearch />
+          </button>
         </div>
       </div>
 
